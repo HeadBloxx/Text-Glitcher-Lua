@@ -78,7 +78,7 @@ local StylesFunction = {} do
 			self.TextDisplay.Text = self.Reversed and ThisGlitch .. FullString:sub(#FullString-Int.Value+1, #FullString) or FullString:sub(1, Int.Value) .. ThisGlitch
 			
 			local Letter = FullString:sub(Int.Value, Int.Value)
-			self.UnglitchedEvent:Fire(Letter)
+			self.UnglitchedEvent:Fire(Letter, self.Reversed)
 			task.wait(self.UpdateRate)
 		end
 	end
@@ -92,7 +92,7 @@ local StylesFunction = {} do
 			self.TextDisplay.Text = FullString:sub(1, Int.Value) .. Suffix
 			
 			local Letter = FullString:sub(Int.Value, Int.Value)
-			self.UnglitchedEvent:Fire(Letter)
+			self.UnglitchedEvent:Fire(Letter, self.Reversed)
 			task.wait(self.UpdateRate)
 		end
 	end
@@ -110,7 +110,7 @@ local StylesFunction = {} do
 			LastIndex = Int.Value
 			
 			local Letter = FullString:sub(Int.Value, Int.Value)
-			self.UnglitchedEvent:Fire(Letter)
+			self.UnglitchedEvent:Fire(Letter, self.Reversed)
 			task.wait(self.UpdateRate)
 		end
 
